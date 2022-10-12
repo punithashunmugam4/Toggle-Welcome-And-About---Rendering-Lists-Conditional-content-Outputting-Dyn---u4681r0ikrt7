@@ -4,13 +4,7 @@ import "../styles/App.css";
 const App = () => {
   const [style1,setstyle1]=useState({display:"block"})
   const [style2,setstyle2]=useState({display:"none"})
-  const handleClick=(event)=>{
-    if(style1.display==="block"){
-      
-    }
-    else{
-      
-    }
+  const handleClick=event=>{
     switch (event.detail) {
       case 1: {
         console.log('single click');
@@ -29,6 +23,10 @@ const App = () => {
         setstyle1({display:"block"})
         setstyle2({display:"none"})
         break;
+      }
+      default:{
+        setstyle1({display:"block"})
+       setstyle2({display:"none"})
       }
     }
   }
